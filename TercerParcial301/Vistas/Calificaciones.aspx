@@ -9,6 +9,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Font-Size="Large" Text="Buen dia Alumno, favor de verificar tus califiaciones. Gracias."></asp:Label>
         </div>
     </form>
 </body>

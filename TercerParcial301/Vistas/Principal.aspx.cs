@@ -11,7 +11,42 @@ namespace TercerParcial301.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Tipo"] == null)
+            {
+                // Si no hay sesión de usuario, redirigir al formulario de inicio de sesión
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                string tipoUsuario = Session["Tipo"].ToString();
+                // desactiva todo los Link Button
+                LinkButton1.Enabled = false;
+                LinkButton2.Enabled = false;
+                LinkButton3.Enabled = false;
 
+                switch (tipoUsuario)
+                {
+                    case "Alumno":
+                        LinkButton1.Enabled = true;
+                        break;
+                    case "Docente":
+                        LinkButton2.Enabled = true;
+                        break;
+                    case "Administrativo":
+                        LinkButton3.Enabled = true;
+                        break;
+                    default:
+                        Response.Redirect("UknownPage.aspx");
+                        break;
+                }
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
         }
     }
 }

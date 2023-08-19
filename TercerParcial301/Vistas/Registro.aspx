@@ -37,6 +37,8 @@
             <asp:Label ID="Label6" runat="server"></asp:Label>
             <br />
             <asp:Button ID="Button2" runat="server" Text="Insertar Datos" OnClick="Button2_Click" />
+        &nbsp;&nbsp;
+            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Regresar" />
         </div>
     </form>
 </body>

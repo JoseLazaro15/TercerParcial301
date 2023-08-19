@@ -9,6 +9,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
+            <asp:Label ID="Label1" runat="server" Font-Size="Large" Text="Buen dia administrativo, ingresa un nuevo alumno. Gracias."></asp:Label>
         </div>
     </form>
 </body>

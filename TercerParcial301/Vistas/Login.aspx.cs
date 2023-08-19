@@ -20,7 +20,7 @@ namespace TercerParcial301.Vistas
         {
             string[] tipo;
 
-            if ((TextBox1.Text == "") & (TextBox2.Text == ""))
+            if (TextBox1.Text == "" && TextBox2.Text == "")
             {
                 Label3.Text = "Proporcione correctamente los datos";
             }

@@ -11,7 +11,12 @@ namespace TercerParcial301.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            bool docente = Session["Tipo"]?.ToString() == "Docente";
 
+            if (!docente)
+            {
+                Response.Redirect("UknownPage.aspx");
+            }
         }
     }
 }

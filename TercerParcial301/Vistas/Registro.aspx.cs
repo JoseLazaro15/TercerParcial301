@@ -52,5 +52,10 @@ namespace TercerParcial301.Vistas
         {
 
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

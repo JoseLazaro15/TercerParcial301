@@ -77,6 +77,7 @@
     <Content Include="Vistas\Registro.aspx" />
     <Content Include="Vistas\RegistroAlumno.aspx" />
     <Content Include="Vistas\RegistroCalificaciones.aspx" />
+    <Content Include="Vistas\UknownPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="Vistas\RegistroCalificaciones.aspx.designer.cs">
       <DependentUpon>RegistroCalificaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\UknownPage.aspx.cs">
+      <DependentUpon>UknownPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\UknownPage.aspx.designer.cs">
+      <DependentUpon>UknownPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

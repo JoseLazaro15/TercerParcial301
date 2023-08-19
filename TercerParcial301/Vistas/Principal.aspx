@@ -19,6 +19,7 @@
             <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Vistas/RegistroAlumno.aspx">Registrar Datos de Alumno</asp:LinkButton>
             <br />
             <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Logout" />
             <br />
         </div>
     </form>

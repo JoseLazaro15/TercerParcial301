@@ -57,12 +57,13 @@ namespace TercerParcial301.Controladores
 
         public string[] BuscarUsuario(string dat1, string dat2)
         {
-            string[] tipo = new string[2];
+            string[] tipo = new string[3];
 
             tipo[0] = "Vacio";
             tipo[1] = "vacio";
+            tipo[2] = "vacio";
 
-            SqlCommand cmd4 = new SqlCommand("SELECT IdU,Tipo FROM Usuario WHERE Usuario= @d1 AND Contraseña = @d2", conn);
+            SqlCommand cmd4 = new SqlCommand("SELECT IdU,Usuario,Tipo FROM Usuario WHERE Usuario= @d1 AND Contraseña = @d2", conn);
             cmd4.Parameters.Add("@d1", SqlDbType.VarChar).Value = dat1;
             string dat3 = EncriptarClave(dat2);
             cmd4.Parameters.Add("@d2", SqlDbType.VarChar).Value = dat3;
@@ -72,6 +73,7 @@ namespace TercerParcial301.Controladores
             {
                 tipo[0] = myReader4[0].ToString();
                 tipo[1] = myReader4[1].ToString();
+                tipo[2] = myReader4[2].ToString();
             }
             myReader4.Close();
             conn.Close();
