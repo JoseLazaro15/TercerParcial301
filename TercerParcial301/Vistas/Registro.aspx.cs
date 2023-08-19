@@ -13,12 +13,16 @@ namespace TercerParcial301.Vistas
         Metodos met = new Metodos();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) 
-            {
-                DropDownList1.Items.Add(new ListItem("Alumno", "Alumno"));
-                DropDownList1.Items.Add(new ListItem("Docente", "Docente"));
-                DropDownList1.Items.Add(new ListItem("Administrativo", "Administrativo"));
+            if (!IsPostBack)
+            {   
+                string[] roles = { "Alumno", "Docente", "Administrativo" };
+
+                foreach (string role in roles)
+                {
+                    RadioButtonList1.Items.Add(new ListItem(role, role));
+                }
             }
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -45,17 +49,18 @@ namespace TercerParcial301.Vistas
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Label6.Text = met.InsertarUsuarios(TextBox5.Text, TextBox1.Text, TextBox2.Text, DropDownList1.Text);
+            Label6.Text = met.InsertarUsuarios(TextBox5.Text, TextBox1.Text, TextBox2.Text, RadioButtonList1.Text);
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

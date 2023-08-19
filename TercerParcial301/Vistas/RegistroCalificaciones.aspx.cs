@@ -11,8 +11,10 @@ namespace TercerParcial301.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Se crea una variable boleana para comparar el Tipo
             bool docente = Session["Tipo"]?.ToString() == "Docente";
 
+            //Si el tipo no es docente entonces redirecciona a UknownPage
             if (!docente)
             {
                 Response.Redirect("UknownPage.aspx");

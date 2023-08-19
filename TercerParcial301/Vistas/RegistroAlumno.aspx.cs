@@ -11,8 +11,10 @@ namespace TercerParcial301.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Se crea una variable boleana para comparar el Tipo
             bool administrativo = Session["Tipo"]?.ToString() == "Administrativo";
 
+            //Si el tipo no es administrativo entonces redirecciona a UknownPage
             if (!administrativo)
             {
                 Response.Redirect("UknownPage.aspx");

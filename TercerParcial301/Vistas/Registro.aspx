@@ -25,10 +25,10 @@
             <asp:Button ID="Button1" runat="server" Text="SHA1" OnClick="Button1_Click" />
             <br />
             <br />
-            Tipo&nbsp;
-            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-            </asp:DropDownList>
-            <br />
+            Tipo:<br />
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+            </asp:RadioButtonList>
+            &nbsp;&nbsp;
             <br />
             <asp:Label ID="Label4" runat="server" Text="Algoritmo"></asp:Label>
             &nbsp;<asp:TextBox ID="TextBox4" runat="server" Width="746px"></asp:TextBox>

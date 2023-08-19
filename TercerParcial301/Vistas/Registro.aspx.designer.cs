@@ -87,13 +87,13 @@ namespace TercerParcial301.Vistas
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// RadioButtonList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
 
         /// <summary>
         /// Label4 control.
